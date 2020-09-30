@@ -1,0 +1,309 @@
+import time
+
+Resposta_A = ["A", "a"]
+Resposta_B = ["B", "b"]
+Resposta_N = ["N","n"]
+
+Inst = ("\n Use apenas A e B\n")
+
+print("\nBem vindo a Asylum\n")
+time.sleep(1)
+print("A) Play\nB) Exit\n")
+
+escolha = input(">> ")
+
+if escolha in Resposta_A:
+  print( "Esse é apenas o primeiro caítulo de uma aventura que mistura terror e mistério.\n\n Bem vindo ao Asylum\n\n Olá, Eu sou o Game Master, mas pode me chamar de GM, vou te guiar por essa horripilante aventura.\n Mas antes gostaria de saber algumas coisas.\n"
+    )
+  name = input("Qual seu nome aventureiro: ")
+  Idade = input("Qual sua idade: ")
+  Cidade = input("E qual cidade o nosso investigador está: ")
+  print("\n\nMuito prazer", name, ", espero que goste, e boa sorte!")
+  time.sleep(1)
+elif escolha in Resposta_B:
+    print("Obrigado, tchau :)")
+else:
+    print(Inst)
+ 
+#------------------------------------------------------------------------------------------------------------------------------------------------
+
+def intro():
+
+    print("\n\nTudo começa em", Cidade,
+        ", você está em sua casa dormindo A chuva cai de modo torrencial do lado de fora, os trovões ecoam e a luz entra pelo quarto, você acorda extremamente assustado como se estivesse tentando se livrar de um pesadelo horrivel. Ao olhar para o relógio vê que são 3h da manhã. O que você faz ?\n "
+    )
+    time.sleep(1)
+    print("""A) Levantar e fechar a cortina\nB) Tenta voltar dormir.""")
+    escolha = input(">> ")
+    if escolha in Resposta_A:
+        levantar()
+    elif escolha in Resposta_B:
+        dormir()
+    else:
+        print(Inst)
+        intro()
+
+
+def levantar():
+    print(
+        "\n Você levanta cambaleando, esfegando os olhos e bocejando, ao chegar na frente da janela, você consegue enxergar uma silhueta humanóide em frente a sua casa. Assustado, você esfrega os olhos achando que poderia ser o sono, e o vulto desaparece. Você fecha a cortina, ainda sem entender o que está acontecendo, e se senta na cama. Meio desnorteado, e agora sem sono, acaba notando em cima de sua escrivaninha um livro o qual você tinha achado em uma escavassão da qual tinha feito umas semanas atrás. Ao olhar um sentimento estranho vem a sua cabeça, e flashes do seu pesadelo começam aparecer. Nesse momento você decide ?\n"
+    )
+    time.sleep(1)
+    print("""A) Ir até a escrivaninha e pegar o Livro\nB) Deixar para lá e tentar dormir."""
+    )
+    escolha = input(">> ")
+    if escolha in Resposta_A:
+        esc()
+    elif escolha in Resposta_B:
+        dorm()
+    else:
+        print(Inst)
+        levantar()
+
+def dormir():
+  print("\nVocê tenta voltar a dormir, mas escuta um barulho do lado de fora da janela. Pensando que poderia ser um gato, ou apenas a chuva forte lá fora, você sem muita vontade pensa se levanta para averiguar, ou se volta a dormir. Você decide levantar ou continua tentando dormir?\n")
+  time.sleep(1)
+  print("A) Tenta dormir\nB) Levanta para averiguar.")
+  escolha = input(">> ")
+  if escolha in Resposta_A:
+    Fim6()
+  elif escolha in Resposta_B:
+    lev()
+  else:
+        print(Inst)
+        dormir()
+
+
+
+def lev():
+  print("\nVocê decide levantar, quando chega até a janela para ver o que está acontecendo, você não vê nada, apenas a chuva forte. Após observar por um tempo, você decide descer até a cozinha para tomar um pouco d'água antes de voltar a dormir. O momento em que você desce, e coloca a água no copo você escuta um som de vidro quebrando no andar de cima. Você está com sono, e não está se importando muito com o barulho, provavelmente é o gato do vizinho da chuva, ou os galhos da árvore quebrando a janela graças ao vendaval do lado de fora. Você então sobe despretenciosamente, chegando perto dos ultimos degraus voce então consegue enxergar dentro do seu quarto um vulto de capuz tentando pegar o livro na escrivaninha. O que você faz:\n")
+  time.sleep(1)
+
+  print("A) Enfrenta o ser\nB) Fica furtivo")
+  escolha = input(">> ")
+  if escolha in Resposta_A:
+    enfrenta()
+  elif escolha in Resposta_B:
+    enfrenta()
+  else:
+    print(Inst)
+    lev()
+
+
+
+def enfrenta():
+  print("\nVocê percebe que aquela criatura não te percebeu. Procurando então algo que poderia usar para se defender, você desce até a cozinha pega uma faca e volta subir demodo rápido e silêncioso. Você percebe, que a criatura ainda está no seu quarto, agora com o livro em mãos. Indo em direção a escada, o que você pretende fazer\n")
+  time.sleep(1)
+
+  print("A) Correr\nB) Lutar")
+  escolha = input(">> ")
+  if escolha in Resposta_A:
+    Fim4()
+  elif escolha in Resposta_B:
+    lutar()
+  else:
+    print(Inst)
+    enfrenta()
+
+
+
+def lutar():
+  print("\nVocê entra com uma investida e pega o ser desprevinido, e desferindo um golpe com a faca que passa de raspão em seu braço, fazendo com que ele solte o livro. Nesse momento você consegue enxergar melhor o ser humanóide. Ele tem um rosto cadavérico, olhos amarelos, escamas em algumas partes do rosto, suas mãos possuem pouca carne, e unhas grandes. Ele solta um grito, mas não de dor, e sim de raiva. Nesse momento ele vem para cima de você com as garras a mostra, tentando te agarrar. Você consegue desviar, mas precisa tomar uma decisão rápida\n")
+  time.sleep(1)
+
+  print("A) Pegar Livro\nB) Ataque Oportunidade")
+  escolha = input(">> ")
+  if escolha in Resposta_A:
+    Fim7()
+  elif escolha in Resposta_B:
+    Fim8()
+  else:
+    print(Inst)
+    lutar()
+
+  
+
+
+def dorm():
+  print("\n Você está com sono, mesmo com aquele sentimento estranho, os pequnos flashes do pesadelo aparecendo, você volta deitar e tenta dormir novamente, até porque tudo aquilo pode ser só coisa da sua cabeça, certo? Você não consegue pegar no sono. Aquele sentimento ainda está bem forte dentro de você. Mais uma vez você se levanta, encara o livro na escrivaninha. O que você prefere fazer?\n")
+  time.sleep(1)
+
+  print("A) Ir até a escrivaninha e pegar o Livro\nB) Ficar deitado ")
+  escolha = input(">> ")
+  if escolha in Resposta_A:
+    esc()
+  elif escolha in Resposta_B:
+    Fim5()
+  else:
+    print(Inst)
+    dorm()
+
+
+
+
+def esc():
+
+  print("\nUm pouco mais acordado, você anda até a escrivanhia, o livro tem um aspecto estranho em", Idade, " anos da sua vida, você nunca tinha visto algo semelhante. Ele parece ser de couro, mas um couro diferente, bem desgastado e totalmente costurado. Aquela era a primeira vez que você abria ele desde que tinha achado. A grade real é que você não iria trazê lo para  casa, mas por algum motivo, você achou ele diferente de tudo que já tinha achado e resolveu levar para estudar mais afundo. Ao pegar o livro você se fura, e um pouco do seu sangue escorre pela capa, e um clic é escutado. Você tem a opção de:\n" )
+  time.sleep(1)
+  print("A) Abrir\nB) Deixar o livro de lado e fazer um curativo.")
+  escolha = input(">> ")
+  if escolha in Resposta_A:
+    abrir()
+  elif escolha in Resposta_B:
+    cura()
+  else:
+    print(Inst)
+    esc()
+
+
+
+def cura():
+  print("\nVocê decide deixar então o livro de lado, e ir até o banheiro fazer um pequeno curativo. Você começa procurar os itens necessário para poder enfaixar o dedo, e então escuta um barulho de vidro quebrando, vindo do seu quarto. Desesperado você volta ao quarto correndo, quando chega na porta dele, voce consegue enxergar na outra extremidade um vulto de capuz tentando pegar o livro na escrivaninha. O que você faz:\n")
+  time.sleep(1)
+  print("\nA) Entrar\nB) Corre.")
+  escolha = input(">> ")
+  if escolha in Resposta_A:
+    Fim3()
+  elif escolha in Resposta_B:
+    Fim4()
+  else:
+    print(Inst)
+    cura()
+
+
+  
+def abrir():
+  print("\nNo momento em que você abre e começa passar as páginas, um temor recai sobre você... Aquilo parece um livro de feitiçaria e invocação. Criaturas grotescas, seguidas de textos em uma língua da qual você nunca viu na vida. Parecia um bestiário de algum culto bem antigo, algo que nunca deveria ter saído do esquecimento. Enquanto você passa as páginas, algumas gostas de sangue iam ficando presas. Pouco a pouco, parêcia que a sua sanidade ia se esvaindo, você ao mesmo tempo que sente um medo, um pavor daquilo, você não consegue parar de ver. Sua visão começa embaralhar, você começa entender o que está escrito, e inconscientemente entoar aquelas palavras na sua cabeça. Voce sente um vendo frio entrando no quarto, mesmo com as janelas fechadas. Um clarão espectral vindo atrás de você, um cheiro de mar domina todo o cômodo, uma gota cai sobre sua mão. O que você decide fazer?\n")
+  time.sleep(1)
+  print("A) Olhar para cima\nB) Fechar o livro")
+  escolha = input(">>")
+
+  if escolha in Resposta_A:
+    Fim1()
+  elif escolha in Resposta_B:
+    Fim2()
+  else:
+    print(Inst)
+    abrir()
+
+#------------------------------------------------------------------------------------------------------------------------------------
+
+def Fim1():
+  print("\nAo olhar para cima, você percebe algo semelhante á um portal se abrindo em seu teto, dele começa cair algumas gostas. Aterrorizado com o que estava acontecendo, não sabendo mais se aquilo era um sonho ou se era realidade. Tentaculos saiam daquela rachadura, indo em sua direção. Você tenta escapar, mas as ventosas começam grudar no seu rosto. Você grita de dor e agonia, sua vida parece sair pela sua boca, você começa ser puxado para aquela abertura no teto. Um clarão acontece... Não tem mais nínguem no quarto, apenas o livro fechado na escrivanhia, a janela aberta, o vento frio soprando as cortinas...")
+  time.sleep(1)
+
+  print("\nVocê perdeu... \n\nMas se quiser jogar novamente aperte N: ou B: para sair")
+  escolha = input(">> ")
+  if escolha in Resposta_N:
+    intro()
+  elif escolha in Resposta_B:
+    print("\n Obrigado por jogar :)")
+  else:
+    print(Inst)
+    Fim1()
+
+def Fim2():
+  print("\nAssutado, sem entender nada o que estava acontecendo, você decide então fechar o livro. Um silêncio domina o quarto... O cheiro de mar agora se torna cheiro da chuva, um forte ventro abre a janela e domina todo o quarto. Você ainda está paralisado, o vento frio bate no seu rosto ainda pálido, você aos poucos retorna sua consciência, com medo ainda instaurado em sua mente, você pega o livro com um pano e o guarda dentro da gaveta.")
+  time.sleep(1)
+
+  print("\nVocê sobreviveu a esse dia,", name, ", mas você sabe que essa sensação não irá passar tão cedo.\n\nSe quiser jogar novamente aperte N: ou B: para sair.")
+  escolha = input(">> ")
+  if escolha in Resposta_N:
+    intro()
+  elif escolha in Resposta_B:
+    print("\n Obrigado por jogar :)")
+  else:
+    print(Inst)
+    Fim2()
+
+def Fim3():
+  print("\nVocê incrédulo, e extremamente fora de si entra no quarto gritando com aquilo que parece ser alguém. Mandando sair de sua casa e que iria ligar para polícia. O vulto olha para você e começa sussurrar alguma coisa inaudível, você consegue ver algumas escamas no rosto dele, olhos amarelos, e um rosto extremamente cadavérico, ele começa ir em sua direção. Você tenta correr, mas já é tarde, seu corpo esta totalmente paralizado, você está com medo. Ele toca em seu peito, com uma mão quase sem carne, e unhas gigantes, você entra em um estado de transe. Toda sua vida passa pelo seus olhos, logo um horror imensuravel toma seus pensamentos, seu pesadelo toma conta da sua mente. Criatura gigantes, grandes tentáculos, um ser colossal... ele está vindo em sua direção. A ultima coisa que você vê, é seu sangue na mão daquele ser encapuzado...")
+  time.sleep(1)
+
+  print("\nDesculpe", name, "mas você não sobreviveu.\n\nSe quiser jogar novamente aperte N: ou B: para sair.")
+  escolha = input(">> ")
+  if escolha in Resposta_N:
+    intro()
+  elif escolha in Resposta_B:
+    print("\n Obrigado por jogar :)")
+  else:
+    print(Inst)
+    Fim3()
+
+def Fim4():
+  print("\nVocê olha aquela cena, e seu pirmeiro impulso é sair correndo e ligar para polícia. Sem nem pensar duas vezes, você desce as escadas tentando fazer mínimo de barulho, porém não é suficiente, você olha para trás, aquele ser, agora com o livro em mãos, está andando devagar em sua direção. Você então em desespero abre a porta da sua casa, no momento você da de cara com um rosto conhecido. Sua chefe, historiadora arqueóloga, que apenas fala, ""ENTRA LOGO NO CARRO, VOCÊ ESTÁ EM PERIGO.""" "A criatura fica na chuva observando o carro ir embora...")
+  time.sleep(1)
+
+  print("\nEsse é apenas o começo da sua aventura,", name,". Você sobreviveu.\n\nSe quiser jogar novamente aperte N: ou B: para sair.")
+  escolha = input(">> ")
+  if escolha in Resposta_N:
+    intro()
+  elif escolha in Resposta_B:
+    print("\n Obrigado por jogar :)")
+  else:
+    print(Inst)
+    Fim4()
+
+def Fim5():
+  print("\nVocê está tentando descansar, mas não consegue parar de pensar nesse sentimento que te cerca. Você começa refazer na sua cabeça o dia em que achou o livro, você tenta forçar a lembrar o que foi pesadelo que te fez acordar. Você fecha os olhos para tentar se concentrar, e começa lembrar das escavações, o como aquele livro te chamou atenção por estar soterrado e não ter sido destruído. E que você incoscientemente levou o livro escondido sem ninguém saber... Seu pesadelo começava aparecer em partes. Era algo extremamente horripilante, uma praia de areia cinza, a silhuete de uma rocha colossal no meio do mar, que depois revelou ser uma criatura, ela te olhava, ela sabe onde você está... Tentáculos estavam no lugar da sua boca, eles te perseguiam, eles querem o livro. Você precisa proteger o livro deles. Se você falhar, a raça humana estará condenada... Você volta a si ofegante, com medo, em profundo desespero. Você recebe a ligação da sua chefe, historiadora e arqueóloga, e a única coisa que ela fala é ""PEGUE O LIVRO  E CORRA O MAIS RÁPIDO POSSIVEL."" Você então pega o livro e sai correndo pela casa, tempo suficiente para voce notar, seres humanóides e grotescos entrando pela janela do seu quarto, e correndo atrás de você... Felizmente, você consegue sair, e na porta sua chefe está parada com o carro mando você se apressar. Última coisa que você vê, são criaturas animalescas que parecem ser junção de um humano com algo que você não sabe nem descrever te encarando... Você conseguiu sair vivo, e conseguiu trazer consigo o livro.")
+  time.sleep(1)
+
+  print("\nParabéns,", name,", mas esse é so começoo do seu tormento.\n\nSe quiser jogar novamente aperte N: ou B: para sair.")
+  escolha = input(">> ")
+  if escolha in Resposta_N:
+    intro()
+  elif escolha in Resposta_B:
+    print("\n Obrigado por jogar :)")
+  else:
+    print(Inst)
+    Fim5()
+
+def Fim6():
+  print("\nVocê boceja e pensa,""só mais um pesadelo..."". Você vira para o lado, agarra seu ursinho em formato de polvo, e cai no sono de  novo. É isso, você dormiu, o capítulo acabou, nada aconteceu. Parabén, nome, você acordou 12h do outro dia, e não foi trabalhar... você foi demitido.\n\n FIM \n ")
+  time.sleep(1)
+  
+  print("Se quiser jogar novamente aperte N: ou B: para sair.")
+  escolha = input(">> ")
+  if escolha in Resposta_N:
+    intro()
+  elif escolha in Resposta_B:
+    print("\n Obrigado por jogar :)")
+  else:
+    print(Inst)
+    Fim6()
+
+def Fim7():
+  print("\nO momento em que desvia, você usa a oportuinidade para pegar o livro do chão. Ele está cambaleando por ter agarrado o ar, mas em pouco tempo já consegue se estabelecer. Você está entre a janela e a critatura, que parece se decompor aos poucos. O medo instaura em seu corpo, é o fim. Nesse mesmo momento uma buzina é escutada, você consegue ouvir a voz da sua chefe, historiadora e arqueóloga, gritando para você pular. Nesse momento, uma força sobrenatural parece tomar seu corpo. Você pega impulso, e pula da janela, uma altura de aproximadamente 4m. Você cai no chão com o joelho levemente machucado, e sua chefe te puxando para dentro do carro... Nesse mesmo momento a criatura dá um impulso e se joga em cima do carro. Como se não tivesse medo de se machucar, Helena, já com o carro ligado acelera com tudo fazendo com que aquele ser caia e fique para trás... Gritos de raiva são escutados...\n")
+  time.sleep(1)
+
+  print("Parabens,", name,", você conseguiu sobreviver o primeiro capítulo, mas cuidado... Esse é só o começo.\n\nSe quiser jogar novamente aperte N: ou B: para sair.")
+  escolha = input(">> ")
+  if escolha in Resposta_N:
+    intro()
+  elif escolha in Resposta_B:
+    print("\n Obrigado por jogar :)")
+  else:
+    print(Inst)
+    Fim7()
+
+def Fim8():
+  print("\nMomento em que você esquiva, o ser fica de costas. Você decide então dar um ataque de oportunidade, cravando a faca no meio da coluna da criatura. Ela grita, um líquido verde e gosmento vaza da ferida, num urro de ódio ela se vira te dando um tapa com todas as forças, causando um arranhão em seu peito. Você com a vista embaralhada tentando levantar, só consegue ver aquele ser te olhando. Ele te pega pelo pescoço, coloca a mão em seu peito, e nesse momento você sente sua vida esvaindo aos poucos... A última coisa que você vê, é a mão dele toda ensagrentada...")
+  time.sleep(1)
+
+  print("\nInfelizmente você morreu,", name,".\n\nSe quiser jogar novamente aperte N: ou B: para sair.")
+  escolha = input(">> ")
+  if escolha in Resposta_N:
+    intro()
+  elif escolha in Resposta_B:
+    print("\n Obrigado por jogar :)")
+  else:
+    print(Inst)
+    Fim8()
+
+
+
+
+
+  
+
+intro()
